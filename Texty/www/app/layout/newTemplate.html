@@ -1,0 +1,26 @@
+<ion-view ng-controller="AddTemp as vm">
+     <ion-header-bar class="bar-royal">
+        <h1 class="title" style="font-family: times, Times New Roman, times-roman, georgia, serif;font-size: 28px;">Texty</h1>
+      </ion-header-bar>
+      <ion-content >
+<!--   -->
+ <form ng-submit="vm.addTemplate()">
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-android-textsms placeholder-icon"></i>
+    <textarea placeholder="Type Your Message" ng-model="vm.msg" rows="8" ></textarea>
+  </label>
+  
+ <input type="radio"  value="private" ng-model="vm.privacy" >Private
+<input type="radio"  value="public" ng-model="vm.privacy">Public
+  
+  
+</div>
+
+ <div style="width=100%;">       
+<input type="submit" class="button button-outline button-royal" style="float:right;margin-right: 10%;"
+ value= "AddTemplate"/>
+</div>
+</form>
+      </ion-content>
+</ion-view>

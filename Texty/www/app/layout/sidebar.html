@@ -1,0 +1,45 @@
+<!-- <ion-side-menus>
+    <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced">
+<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+</ion-nav-bar>
+<ion-view></ion-view>
+  </ion-pane>
+ 
+  <ion-side-menu side="left">
+  <header class="bar bar-header bar-balanced">
+<h1 class="title">Menu </h1>
+  </header>
+<ion-content class="has-header">
+<ion-list>
+<ion-item nav-clear menu-close>Home</ion-item>
+<ion-item nav-clear menu-close>Contacts</ion-item>
+
+</ion-list>
+</ion-side-menu>
+
+</ion-side-menus>
+ -->
+
+ <ion-view>
+<ion-header-bar class="bar-royal">
+        <h1 class="title" style="font-family: times, Times New Roman, times-roman, georgia, serif;font-size: 28px;">Texty</h1>
+</ion-header-bar>
+
+<ion-content ng-controller="SideBarController as vm">
+
+<input type="button" class="button button-assertive" value="get Data from server" ng-click="vm.getData()" id="mybtn"/>
+
+<ion-list  class="list list-inset">
+   <ion-item ng-repeat="trend in vm.trends" class="item" type="item-text-wrap" href="#" >
+
+   <h2>{{trend.msg}}</h2>
+  <p style="color:red">{{trend.userName}} </p>
+   
+   </ion-item>
+
+   </ion-list>
+<input type="button" class="button" value="Refresh" ng-click="vm.Refresh()" id="refresh"/>
+<p id="message"></p>
+     </ion-content>
+</ion-view>

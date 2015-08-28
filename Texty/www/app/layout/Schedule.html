@@ -1,0 +1,26 @@
+<ion-view >
+<ion-header-bar class="bar-royal">
+        <h1 class="title" style="font-family: times, Times New Roman, times-roman, georgia, serif;font-size: 28px;">Texty</h1>
+      </ion-header-bar>
+<ion-content ng-controller="Schedule as vm">
+<div class="row">
+
+  <div class="col">time: <input type="time" id="myTime" value="22:15:00"></div>
+  <div class="col"><input type='number' id='frequency' placeholder='frequency' ng-model='vm.frequency'></div>
+  
+</div>
+
+<ion-checkbox ng-model="vm.isMon">Monday</ion-checkbox>
+<ion-checkbox ng-model="vm.isTues">Tuesday</ion-checkbox>
+<ion-checkbox ng-model="vm.isWed">Wednesday</ion-checkbox>
+<ion-checkbox ng-model="vm.isThurs">Thursday</ion-checkbox>
+<ion-checkbox ng-model="vm.isFri">Friday</ion-checkbox>
+<ion-checkbox ng-model="vm.isSat">Saturday</ion-checkbox>
+<ion-checkbox ng-model="vm.isSun">Sunday</ion-checkbox>
+
+<input type="button" value="SetSchdeuler" class="button button-outline button-royal" style="float:right; margin-right: 10%;" 
+ng-click="vm.SetScheduler()"> 
+<!-- <input type="button" value="Send SMS" class="button button-outline button-royal" style="float:right; margin-right: 10%;" 
+ng-click="vm.SetScheduler()">  -->
+      </ion-content>
+</ion-view>

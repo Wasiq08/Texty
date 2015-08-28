@@ -1,0 +1,45 @@
+
+
+<ion-view>
+<ion-header-bar class="bar-royal">
+        <h1 class="title" style="font-family: times, Times New Roman, times-roman, georgia, serif;font-size: 28px;">Texty</h1>
+<a href="#/newContact" class="button button-clear icon-right ion-person-add button-light" id="new">
+</a>
+      </ion-header-bar>
+
+<ion-content ng-controller="ContactPopulate as vm">
+<div class="title" style="text-align: center;font-style: italic;"><h2 style="color:purple;">Contacts<h2></div>
+     <!-- <input type="text" placeholder="search" ng-model="query" />
+      -->
+
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search" ng-model="query">
+  </label>
+</div>
+
+
+<div>
+      <ion-list  class="list list-inset">
+	 <ion-item ng-repeat="contact in vm.contacts | filter:query " class="item-remove-animate item-icon-right item-avatar" type="item-text-wrap" href="#/home/contact-details/{{contact.id}}/{{contact.number}}" >
+
+   <img src="./img/person.png">
+	 <h2 >{{contact.name}}</h2>
+	<p>{{contact.relation}} </p>
+	 <i class="icon ion-chevron-right icon-accessory"></i>
+	 
+	 <ion-option-button class="button-assertive"
+                       ng-click="delete_con(contact.id,$index)">
+   Delete
+    </ion-option-button>
+
+	 </ion-item>
+
+	 </ion-list>
+</div>	 
+    
+      </ion-content>
+</ion-view>
+
+<!-- icon ion-ios-trash -->

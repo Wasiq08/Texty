@@ -1,0 +1,35 @@
+<ion-view >
+<ion-header-bar class="bar-royal">
+        <h1 class="title" style="font-family: times, Times New Roman, times-roman, georgia, serif;font-size: 28px;">Texty</h1>
+<a href="#/newTemplate" class="button button-outline icon-right ion-android-textsms button-light" id="new">
+  Add
+</a>
+      </ion-header-bar>
+<ion-content ng-controller="myTemplates as vm">
+<h2 style="color:purple;text-align: center;font-style: italic;"><i>Templates<i></h2>
+    
+      <ion-list  can-swipe="listCanSwipe">
+   <ion-item ng-repeat="template in vm.templates" class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+   <div class="card" >
+    <div class="item item-text-wrap" style="background:lightgrey">
+   <h2 >{{template.msg}}</h2>
+ </div>
+ </div>
+   <ion-option-button class="button-assertive"
+                       ng-click="delete_temp(template.tempId,$index)">
+     Delete
+    </ion-option-button>
+
+   </ion-item>
+
+   </ion-list>
+   
+    
+<!-- <input type="button" class="button button-outline button-royal" style="float:right; margin-right: 10%;"
+ value= "Send" ng-click="Send()"/> -->
+<a href="#/Schedule" class="button button-outline button-energized" style="float:right; margin-right: 10%;">
+  Set Scheduler
+</a>
+
+      </ion-content>
+</ion-view>

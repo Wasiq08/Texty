@@ -1,0 +1,33 @@
+<ion-view ng-controller="AddContact as vm">
+<ion-pane>
+     <ion-header-bar class="bar-royal">
+        <h1 class="title" style="font-family: times, Times New Roman, times-roman, georgia, serif;font-size: 28px;">Texty</h1>
+     <a href="#" class="button button-clear icon-right ion-iphone button-light" id="new" ng-click="vm.phonebook()">
+</a>
+      </ion-header-bar>
+     
+      <ion-content ><!-- ng-controller="AddContact as vm" -->
+<!--   -->
+ <form ng-submit="vm.update()">
+<div class="list">
+  <label class="item item-input item-floating-label">
+    <span class="input-label" style="color:blue;">Name</span>
+    <input type="text" placeholder="Name" id="name" ng-model="vm.name">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label" style="color:blue;">Relation</span>
+    <input type="text" placeholder="Relation" id="relation" ng-model="vm.relation">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label" style="color:blue;">Mobile Number</span>
+    <input type="number" placeholder="Mobile Number" id="number" ng-model="vm.number">
+  </label>
+</div>
+
+ <div style="width=100%;">       
+<input type="submit" class="button button-outline button-royal" style="float:right;margin-right: 10%;" value= "Create" />
+</div>
+</form>
+      </ion-content>
+    </ion-pane>
+</ion-view>
